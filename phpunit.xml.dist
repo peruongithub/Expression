@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="Tests/bootstrap.php"
+        backupGlobals="false"
+        beStrictAboutCoversAnnotation="true"
+        beStrictAboutOutputDuringTests="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        beStrictAboutTodoAnnotatedTests="true"
+        verbose="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        colors="true">
+    <testsuite>
+        <directory suffix="Test.php">Tests</directory>
+    </testsuite>
+    <testsuites>
+        <testsuite name="Trident Expression Test Suite">
+            <directory suffix="Test.php">./Tests/</directory>
+            <directory suffix="Test.php">./vendor/webmozart/expression/tests/</directory>
+            <directory suffix="Test.php">./vendor/verbalexpressions/php-verbal-expressions/tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

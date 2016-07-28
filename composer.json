@@ -1,0 +1,35 @@
+{
+  "name": "trident/expression",
+  "description": "Implementation of the Specification pattern and logical expressions for PHP.",
+  "type": "library",
+  "require": {
+    "php": "^5.3.9|^7.0",
+    "webmozart/expression": "^1.0.0",
+    "verbalexpressions/php-verbal-expressions": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.6"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Perederko Ruslan",
+      "email": "peruongithub@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Trident\\Components\\Expression\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Trident\\Components\\Expression\\": "Tests/",
+      "Webmozart\\Expression\\Tests\\": "vendor/webmozart/expression/tests/"
+    }
+  }
+}
